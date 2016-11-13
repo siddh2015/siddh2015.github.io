@@ -1,0 +1,54 @@
+<html>
+<head>
+<script language=JavaScript> var message="Function Disabled!"; function clickIE4(){ if (event.button==2){ alert(message); return false; } } function clickNS4(e){ if (document.layers||document.getElementById&&!document.all){ if (e.which==2||e.which==3){ alert(message); return false; } } } if (document.layers){ document.captureEvents(Event.MOUSEDOWN); document.onmousedown=clickNS4; } else if (document.all&&!document.getElementById){ document.onmousedown=clickIE4; } document.oncontextmenu=new Function("alert(message);return false") </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+
+
+
+ <script language="javascript">
+<!--
+var tx = new Array (
+"ResultsTrack",
+"Triggering Efficiency & Effectiveness");
+
+var txcount=2;
+var i=1;
+var wo=0;
+var ud=1;
+function animatetitle()
+{
+window.document.title=tx[wo].substr(0, i)+"_";
+if (ud==0) i--;
+if (ud==1) i++;
+if (i==-1) {ud=1;i=0;wo++;wo=wo%txcount;}
+if (i==tx[wo].length+10) {ud=0;i=tx[wo].length;}
+// if (window.document.title.length < 20 ) window.document.title=window.document.title+"-";
+// if (window.document.title.length == 20 ) window.document.title=window.document.title+"]";
+// if (window.document.title.length == 21 ) setTimeout("window.document.title='Animierte Seitentitel '; ",1000);
+parent.window.document.title=tx[wo].substr(0, i)+"_";
+setTimeout("animatetitle()",200);
+}
+animatetitle();
+// -->
+</script>
+<script type="text/javascript">
+	var currentDate = new Date()
+	var day = currentDate.getDate()
+	var month = currentDate.getMonth() + 1
+	var year = currentDate.getFullYear()
+	document.write("<b>" + day + "/" + month + "/" + year + "</b>")
+</script>
+<script type="text/javascript">
+	var currentTime = new Date()
+	var hours = currentTime.getHours()
+	var minutes = currentTime.getMinutes()
+
+	if (minutes < 10)
+	minutes = "0" + minutes
+
+	document.write("<b>" + hours + ":" + minutes + " " + "</b>")
+</script>
+</body>
+</html>
